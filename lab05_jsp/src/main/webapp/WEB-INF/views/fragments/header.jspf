@@ -27,7 +27,11 @@
                     <a class="nav-link" href="${newPostPage}">New Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TODO</a>
+                    <a class="nav-link" href="#">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <c:url var="signUpPage" value="/user/signup" />
+                    <a class="nav-link" href="${signUpPage}">회원가입</a>
                 </li>
             </ul>
         </div>
