@@ -14,33 +14,25 @@
 </head>
 <body>
     <div class="container-fluid">
-        <c:set var="pageTitle" value="New Post" scope="page" />
-        <%@ include file="../fragments/header.jspf" %>
-        
         <main>
-            <div class="mt-2 card">
+            <div class="card mt-2">
                 <div class="card-header">
-                    <h2>새 글 작성</h2>
+                    <h2>로그인</h2>
                 </div>
                 <div class="card-body">
-                    <c:url var="newPostPage" value="/post/create" />
-                    <form method="post" action="${newPostPage}">
+                    <c:url var="signInPage" value="/user/signin" />
+                    <form method="post" action="${signInPage}">
                         <div class="mt-2">
-                            <input class="form-control" 
-                                type="text" name="title" placeholder="제목"
-                                required autofocus />
+                            <input type="text" name="userid" placeholder="아이디" 
+                                class="form-control" required autofocus />
                         </div>
                         <div class="mt-2">
-                            <textarea class="form-control" 
-                                rows="5" name="content" placeholder="내용" required></textarea>
-                        </div>
-                        <div class="mt-2 d-none">
-                            <input class="form-control" 
-                                type="text" name="author" value="${signedInUser}" readonly/>
+                            <input type="password" name="password" placeholder="비밀번호" 
+                                class="form-control" required />
                         </div>
                         <div class="mt-2">
                             <input class="form-control btn btn-outline-success" 
-                                type="submit" value="저장" />
+                                type="submit" value="로그인" />
                         </div>
                     </form>
                 </div>
